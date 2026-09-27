@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>The Sweetboys 🍬 | Sweets & Treats</title>
+
+    <meta name="description"
+          content="The Sweetboys — sweet treats, candy and entrepreneur packs. 🍬">
+
+    <link rel="icon"
+          type="image/x-icon"
+          href="images/LogoSweetboys.png">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            🍬 The Sweetboys 🍭
+        </div>
+
+        <p class="tagline">
+            Just buy the sweets! 💙
+        </p>
+
+    </header>
+
+
+
+    <!-- SEARCH BAR -->
+
+    <div class="search-container">
+
+        <input
+            type="text"
+            class="search"
+            id="search"
+            placeholder="🔍 Search for something sweet..."
+        >
+
+    </div>
+
+
+
+    <!-- CATEGORY BUTTONS -->
+
+    <div class="buttons">
+
+        <button class="bubble-button">
+            🍭 All
+        </button>
+
+        <button class="bubble-button">
+            🍬 Sweets
+        </button>
+
+        <button class="bubble-button">
+            🍫 Chocolate
+        </button>
+
+        <button class="bubble-button">
+            🧸 Gummies
+        </button>
+
+    </div>
+
+
+
+    <!-- PRODUCTS -->
+
+    <main class="products" id="products">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product">
+
+            <div class="product-images">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/Candylollysun.jpeg"
+                        alt="Candy Lollipop">
+
+                </div>
+
+
+                <div class="product-image">
+
+                    <img
+                        src="images/lollipopjpg.jpg"
+                        alt="Candy Lollipop">
+
+                </div>
+
+            </div>
+
+
+            <h2>
+                Candy Lollipop
+            </h2>
+
+
+            <p class="description">
+                Colourful, candy salad in lollipop form?
+                What a treat!
+            </p>
+
+
+            <div class="price">
+                R88 for 3!
+            </div>
+
+
+            <button
+                class="buy-button"
+                onclick="openPortal('lollipop')">
+
+                I want one! 🍭
+
+            </button>
+
+        </div>
+
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product">
+
+            <div class="product-images">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/Epackfront.jpeg"
+                        alt="Candy Cicles">
+
+                </div>
+
+
+                <div class="product-image">
+
+                    <img
+                        src="images/Epackback.jpeg"
+                        alt="Candy Cicles">
+
+                </div>
+
+            </div>
+
+
+            <h2>
+                Entrepreneur Pack: Candy Cicles
+            </h2>
+
+
+            <p class="description">
+                Soft, chewy goodness for your business.
+            </p>
+
+
+            <div class="price">
+                R100 — Free delivery!
+            </div>
+
+
+            <button
+                class="buy-button"
+                onclick="openPortal('cicles')">
+
+                I want one! 🍓
+
+            </button>
+
+        </div>
+
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product">
+
+            <div class="product-images">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/Epack2front.jpeg"
+                        alt="Candy Orange Slices">
+
+                </div>
+
+
+                <div class="product-image">
+
+                    <img
+                        src="images/chocolate2.jpg"
+                        alt="Candy Orange Slices">
+
+                </div>
+
+            </div>
+
+
+            <h2>
+                Entrepreneur Pack: Candy Orange Slices
+            </h2>
+
+
+            <p class="description">
+                Tiny bites of multi-flavoured orange slices,
+                perfect for your business.
+            </p>
+
+
+            <div class="price">
+                R100 — Free delivery!
+            </div>
+
+
+            <button
+                class="buy-button"
+                onclick="openPortal('orange')">
+
+                I want one! 🍊
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ORDER PORTAL -->
+
+    <div
+        class="portal-overlay"
+        id="portal">
+
+
+        <div class="portal">
+
+
+            <!-- CLOSE -->
+
+            <button
+                class="close-portal"
+                onclick="closePortal()">
+
+                ×
+
+            </button>
+
+
+
+            <!-- EMOJI -->
+
+            <div
+                class="portal-emoji"
+                id="portalEmoji">
+
+                🍭
+
+            </div>
+
+
+
+            <!-- TITLE -->
+
+            <h2 id="portalTitle">
+                Candy Lollipop
+            </h2>
+
+
+            <p id="portalDescription">
+                Choose how many you want!
+            </p>
+
+
+
+            <!-- QUANTITY -->
+
+            <div class="quantity-section">
+
+                <label>
+                    Quantity
+                </label>
+
+
+                <div class="quantity-controls">
+
+
+                    <button
+                        class="quantity-button"
+                        onclick="changeQuantity(-1)">
+
+                        −
+
+                    </button>
+
+
+                    <span id="quantity">
+                        3
+                    </span>
+
+
+                    <button
+                        class="quantity-button"
+                        onclick="changeQuantity(1)">
+
+                        +
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TOTAL -->
+
+            <div class="total">
+
+                Total:
+
+                <span id="total">
+                    R88
+                </span>
+
+            </div>
+
+
+
+            <!-- CONFIRM -->
+
+            <button
+                class="confirm-button"
+                onclick="confirmOrder()">
+
+                Continue with order 🍬
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        Made with 🍬 by The Sweetboys
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+
+        /* =========================
+           SEARCH
+        ========================= */
+
+
+        const search =
+            document.getElementById("search");
+
+
+        const products =
+            document.querySelectorAll(".product");
+
+
+        search.addEventListener("input", function () {
+
+
+            const searchText =
+                search.value.toLowerCase();
+
+
+            products.forEach(function(product) {
+
+
+                const productName =
+                    product
+                    .querySelector("h2")
+                    .textContent
+                    .toLowerCase();
+
+
+                if (
+                    productName.includes(searchText)
+                ) {
+
+                    product.style.display = "";
+
+                }
+
+                else {
+
+                    product.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+
+
+        /* =========================
+           PORTAL ELEMENTS
+        ========================= */
+
+
+        const portal =
+            document.getElementById("portal");
+
+
+        const portalTitle =
+            document.getElementById("portalTitle");
+
+
+        const portalDescription =
+            document.getElementById("portalDescription");
+
+
+        const portalEmoji =
+            document.getElementById("portalEmoji");
+
+
+        const quantityDisplay =
+            document.getElementById("quantity");
+
+
+        const totalDisplay =
+            document.getElementById("total");
+
+
+
+        /* =========================
+           ORDER VARIABLES
+        ========================= */
+
+
+        let currentProduct = "";
+
+        let quantity = 3;
+
+        let pricePerUnit = 0;
+
+        let minimumQuantity = 1;
+
+
+
+        /* =========================
+           OPEN PORTAL
+        ========================= */
+
+
+        function openPortal(product) {
+
+
+            /* LOLLIPOP */
+
+            if (product === "lollipop") {
+
+                currentProduct =
+                    "Candy Lollipop";
+
+                pricePerUnit =
+                    88 / 3;
+
+                minimumQuantity =
+                    3;
+
+                quantity =
+                    3;
+
+                portalEmoji.textContent =
+                    "🍭";
+
+                portalDescription.textContent =
+                    "Choose how many lollipops you want!";
+
+            }
+
+
+            /* CICLES */
+
+            else if (product === "cicles") {
+
+                currentProduct =
+                    "Entrepreneur Pack: Candy Cicles";
+
+                pricePerUnit =
+                    100;
+
+                minimumQuantity =
+                    1;
+
+                quantity =
+                    1;
+
+                portalEmoji.textContent =
+                    "🍓";
+
+                portalDescription.textContent =
+                    "Choose how many packs you want!";
+
+            }
+
+
+            /* ORANGE */
+
+            else if (product === "orange") {
+
+                currentProduct =
+                    "Entrepreneur Pack: Candy Orange Slices";
+
+                pricePerUnit =
+                    100;
+
+                minimumQuantity =
+                    1;
+
+                quantity =
+                    1;
+
+                portalEmoji.textContent =
+                    "🍊";
+
+                portalDescription.textContent =
+                    "Choose how many packs you want!";
+
+            }
+
+
+            /* UPDATE PORTAL */
+
+            portalTitle.textContent =
+                currentProduct;
+
+
+            quantityDisplay.textContent =
+                quantity;
+
+
+            updateTotal();
+
+
+            /* SHOW PORTAL */
+
+            portal.style.display =
+                "flex";
+
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
+
+
+        /* =========================
+           UPDATE TOTAL
+        ========================= */
+
+
+        function updateTotal() {
+
+
+            const total =
+                pricePerUnit * quantity;
+
+
+            totalDisplay.textContent =
+                "R" +
+                Math.round(total);
+
+        }
+
+
+
+        /* =========================
+           CHANGE QUANTITY
+        ========================= */
+
+
+        function changeQuantity(amount) {
+
+
+            let newQuantity =
+                quantity + amount;
+
+
+            if (
+                newQuantity < minimumQuantity
+            ) {
+
+                newQuantity =
+                    minimumQuantity;
+
+            }
+
+
+            if (
+                newQuantity > 50
+            ) {
+
+                newQuantity =
+                    50;
+
+            }
+
+
+            quantity =
+                newQuantity;
+
+
+            quantityDisplay.textContent =
+                quantity;
+
+
+            updateTotal();
+
+        }
+
+
+
+        /* =========================
+           CONFIRM ORDER
+        ========================= */
+
+
+        function confirmOrder() {
+
+
+            if (!currentProduct) {
+
+                return;
+
+            }
+
+
+            window.location.href =
+                "index2.html?product=" +
+                encodeURIComponent(
+                    currentProduct
+                ) +
+                "&quantity=" +
+                quantity;
+
+        }
+
+
+
+        /* =========================
+           CLOSE PORTAL
+        ========================= */
+
+
+        function closePortal() {
+
+
+            portal.style.display =
+                "none";
+
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+
+        /* =========================
+           CLICK OUTSIDE TO CLOSE
+        ========================= */
+
+
+        portal.addEventListener(
+            "click",
+            function(event) {
+
+
+                if (
+                    event.target === portal
+                ) {
+
+                    closePortal();
+
+                }
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
